@@ -1,0 +1,9 @@
+<h1> Edit Member </h1>
+
+<%= form_for @member do |f| %>
+    <%=f.label :name %>
+    <%=f.text_field :name%>
+    <%=f.label :age %>
+    <%=f.number_field :age, min: 18, max: 75%>
+    <%=f.submit "Edit Member"%>
+    <%end%>

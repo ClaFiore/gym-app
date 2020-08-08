@@ -1,0 +1,7 @@
+<h1> All Trainers </h1>
+
+<ul><% @trainers.each do |t| %>
+    <li> <%= link_to t.name, trainer_path(t) %> </li>
+ <% end %></ul>
+ <br><%= button_to "Add Trainer", new_trainer_path, method: :get%><br>
+ <%= button_to "Return to Homepage", home_path, method: :get%>

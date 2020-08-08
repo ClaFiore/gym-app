@@ -1,0 +1,23 @@
+<h1> Trainer Details Page </h1>
+
+<h3> Name: <%= @trainer.name %></h4>
+<h3> Specialty: <%= @trainer.specialty %></h4>
+
+
+<h3>Members: </h3>
+    
+<div>
+<ul>
+    <%=@trainer.members.map do |m|%>
+        <li><%=link_to m.name, member_path(m)%></li>
+    <%end%>
+</ul>
+</div>
+
+
+
+<br>
+<br><%= button_to "Delete Trainer", trainer_path(@trainer), method: :delete, data: {confirm: "Are you sure you want to delete this?"}%><br>
+<br><%= button_to "Edit Trainer", edit_trainer_path, method: :get%><br>
+<%= button_to "Return to Homepage", home_path, method: :get%>
+    

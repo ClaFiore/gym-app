@@ -1,0 +1,7 @@
+<h1> All Workouts </h1>
+
+<ul><% @workouts.each do |w| %>
+   <li> <%= link_to w.name, workout_path(w) %> </li>
+<% end %></ul>
+<br><%= button_to "Add Workout", new_workout_path, method: :get%><br>
+<%= button_to "Return to Homepage", home_path, method: :get%>

@@ -1,0 +1,13 @@
+<h1> One-on-One Workout </h1>
+
+<h3> Session: <%= @workout.name %> </h3>
+
+<h3> Trainer: <%= link_to @workout.trainer.name, trainer_path(@workout.trainer) %></h4>
+<h3> Member: <%= link_to @workout.member.name, member_path(@workout.member) %></h4>
+<br>
+<h3> Day: <%= @workout.day %> </h3>
+<h3> Time: <%= @workout.time %> </h3>
+
+<br><%= button_to "Delete Workout", workout_path(@workout), method: :delete, data: {confirm: "Are you sure you want to delete this?"}%><br>
+<br><%= button_to "Edit Workout", edit_workout_path, method: :get%><br>
+<%= button_to "Return to Homepage", home_path, method: :get%>

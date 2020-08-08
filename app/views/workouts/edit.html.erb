@@ -1,0 +1,13 @@
+<h1> Edit Workout </h1>
+
+<%=form_for @workout do |f| %>
+    <%=f.label :name%>
+    <%=f.text_field :name%>
+    <%=f.label :day%>
+    <%=f.text_field :day%>
+    <%=f.label :time%>
+    <%=f.text_field :time%>
+    <%=f.collection_select :member_id, Member.all, :id, :name%>
+    <%=f.collection_select :trainer_id, Trainer.all, :id, :name%>
+    <%=f.submit "Edit Workout"%>
+    <%end%>

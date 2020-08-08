@@ -1,0 +1,7 @@
+<h1> Add Trainer </h1>
+
+<%= form_with model: @trainer do |f| %>
+    <p>Name: <%=f.text_field :name%></p>
+    <p>Specialty: <%=f.text_field :specialty%></p>
+    <%=f.submit "Add Trainer"%>
+    <%end%>

@@ -1,0 +1,9 @@
+<h1>All Members</h1>
+<ul>
+<% @members.each do |member| %>
+    <li><%= link_to member.name, member_path(member) %></li>
+    <% end %>
+    </ul>
+
+    <br><%= button_to "Add Member", new_member_path, method: :get%><br>
+    <%= button_to "Return to Homepage", home_path, method: :get%>
